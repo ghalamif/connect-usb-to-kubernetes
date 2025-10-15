@@ -1,0 +1,12 @@
+apiVersion: akri.sh/v0
+kind: Configuration
+metadata:
+  name: akri-sandisk-conf
+spec:
+  capacity: 1
+  discoveryHandler:
+    discoveryDetails: |
+      groupRecursive: true
+      udevRules:
+      - ATTRS{idVendor}=="0781", ATTRS{idProduct}=="5567"
+    name: udev
